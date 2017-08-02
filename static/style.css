@@ -1,0 +1,138 @@
+.container {
+    position: relative;
+    background-color: #eee;
+    width: 100vw;
+    height: 100vh;
+    perspective: 250px;
+    perspective-origin: bottom;
+}
+
+.controls {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    width: 15rem;
+    text-align: center;
+    transform: rotateX(25deg) scale(1.5);
+}
+
+.control-counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    text-align: center;
+    width: 8rem;
+    line-height: 1rem;
+}
+
+.control-counter small {
+    text-transform:uppercase;
+    font-size: 0.75rem;
+}
+
+.camera {
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.dir-button {
+    font-size: 2rem;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.25rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(221,221,221,0.1);
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    user-select: none;
+}
+
+.dir-button.direction {
+    background-color: #ada;
+    animation: pulseg 0.5s infinite;
+}
+
+.dir-stop.direction {
+    background-color: #daa;
+    animation: pulser 0.5s infinite;
+}
+
+@keyframes pulseg {
+  0% {
+    background-color:  rgb(129,199,132);
+  }
+  50% {
+    background-color:  rgb(76,175,80);
+  }
+  100% {
+    background-color:  rgb(129,199,132);
+  }
+}
+
+@keyframes pulser {
+  0% {
+    background-color:  rgb(229,115,115);
+  }
+  50% {
+    background-color:  rgb(244,67,54);
+  }
+  100% {
+    background-color:  rgb(229,115,115);
+  }
+}
+
+.dir-button:hover, .dir-button.selected {
+    background-color: rgb(33,150,243) !important;
+    cursor: pointer;
+}
+
+.dir-stop:hover, .dir-stop.selected {
+    background-color: rgb(33,150,243) !important;
+}
+
+
+.dir-5 {transform: rotate(-135deg); bottom: 1rem; left: 2rem;}
+.dir-6 {transform: rotate(-090deg); bottom: 4rem; left: 0rem;}
+.dir-7 {transform: rotate(-045deg); bottom: 7rem; left: 2rem;}
+.dir-8 {transform: rotate(000deg); bottom: 8rem; left: 6rem; height: 5rem;}
+.dir-1 {transform: rotate(045deg); bottom: 7rem; right: 2rem;}
+.dir-2 {transform: rotate(090deg); bottom: 4rem; right: 0rem;}
+.dir-3 {transform: rotate(135deg); bottom: 1rem; right: 2rem;}
+.dir-4 {transform: rotate(180deg); bottom: 0rem; left: 6rem;}
+
+.dir-stop {
+    height: 3rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    bottom: 4rem;
+    left: 6rem;
+}
+
+.selected {
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+.counter-0 {}
+.counter-1 { background-color: rgba(33,150,243, 0.1) ;}
+.counter-2 { background-color: rgba(33,150,243, 0.2) ;}
+.counter-3 { background-color: rgba(33,150,243, 0.3) ;}
+.counter-4 { background-color: rgba(33,150,243, 0.4) ;}
+.counter-5 { background-color: rgba(33,150,243, 0.5) ;}
+.counter-6 { background-color: rgba(33,150,243, 0.6) ;}
+.counter-7 { background-color: rgba(33,150,243, 0.7) ;}
+.counter-8 { background-color: rgba(33,150,243, 0.8) ;}
+.counter-9 { background-color: rgba(33,150,243, 0.9) ;}
+
+
